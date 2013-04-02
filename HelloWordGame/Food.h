@@ -14,9 +14,13 @@
 @interface Food : NSObject
 {
     SPoint position;
-
+    CCSprite *foodSprite;
+    int food_count;
 }
 
-- (CCSprite *)setUpFoodPiece;
+- (CCSprite *)setUpFoodSprite;
 - (SPoint)getFoodPosition;
+- (CCSprite *)currentSprite;
+- (void)decreaseFoodCount;
+- (Boolean)isFoodRemaining;
 @end

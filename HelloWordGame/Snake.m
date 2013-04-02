@@ -35,35 +35,46 @@
 
 -(CCSprite *)SpriteAtIndex:(int)index
 {
-    CCSprite *sprite=[CCSprite spriteWithFile:@"Icon.png"];
+    CCSprite *sprite=[CCSprite spriteWithFile:@"snake.png"];
     return sprite;
 }
 
--(void)step
+-(Boolean)step
 {
-    SPoint tmp=_snake_points[0];
-    switch (current_direction) {
+    newHeadPos=_snake_points[0];
+    switch (current_direction)
+    {
         case UP:
-            tmp.y++;
+            newHeadPos.y++;
             break;
         case RIGHT:
-            tmp.x++;
+            newHeadPos.x++;
             break;
         case DOWN:
-            tmp.y--;
+            newHeadPos.y--;
             break;
         case LEFT:
-            tmp.x--;
+            newHeadPos.x--;
             break;
         default:
             break;
     }
     lastPoint=_snake_points[current_length-1];
-    for (int i = current_length - 1; i > 0; i--)
+    
+    if([self isKnockWall])  // 撞墙
+        return NO;
+
+    if([self isEatSelf]) // 撞自己
+        return NO;
+    
+    for (int i = current_length - 1; i > 0; i--)  
     {
         _snake_points[i]=_snake_points[i-1];
     }
-    _snake_points[0]=tmp;
+    _snake_points[0]=newHeadPos;
+    
+    return YES;
+    
 }
 -(void)changeDirection:(CGPoint)point
 {
@@ -89,7 +100,7 @@
     if(point.x==_snake_points[0].x &&point.y==_snake_points[0].y)
     {
         
-        _snake_points[current_length-1]=lastPoint;
+        _snake_points[current_length]=lastPoint;
         CCSprite *sprite=[self SpriteAtIndex:current_length];
         current_length++;
         [_snake_sprites addObject:sprite];
@@ -100,9 +111,23 @@
         return NO;
     }
 }
+-(Boolean)isKnockWall
+{
+    if(newHeadPos.x>MAX_COLS || newHeadPos.y>MAX_ROWS || newHeadPos.x<0 || newHeadPos.y<0 )
+    {
+        return YES;
+    }
+    else
+        return NO;
+}
 -(Boolean)isEatSelf
 {
-    
+    for (int i = current_length - 1; i > 0; i--) // 撞自己
+    {
+        if(newHeadPos.x==_snake_points[i].x && newHeadPos.y==_snake_points[i].y)
+            return YES;
+    }
+    return NO;
 }
 -(Boolean)isClideWithAnotherSnake
 {

@@ -8,17 +8,19 @@
 
 #import "CCLayer.h"
 #import "cocos2d.h"
+#import "AutoSnake.h"
 #import "Snake.h"
 #import "World.h"
 #import "Food.h"
 @interface GameLayer : CCLayer
 {
     Snake *snake;
+    AutoSnake *autoSnake;
     World *world;
     Food *food;
     
-    NSInteger currentSpeed_;
-    float accumulator;
+    float currentSpeed;
+    float cumulation;
 }
 
 +(id)scene;

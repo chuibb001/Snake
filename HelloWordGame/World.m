@@ -12,11 +12,11 @@
 
 -(void)drawGameRect
 {
-    glDisable(GL_LINE_WIDTH);
+    //glDisable(GL_LINE_WIDTH);
 	glLineWidth( 1.0f );
 	//glColor4ub(0,0,0,255);
     
-    CGRect gameRect = CGRectMake(29, 38, 422, 242);
+    CGRect gameRect = CGRectMake(28, 39, 422, 242);
     CGPoint poli[]=
     {gameRect.origin,
         CGPointMake(gameRect.origin.x,gameRect.origin.y + gameRect.size.height),

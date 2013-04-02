@@ -21,6 +21,7 @@ typedef enum
 {
     SPoint _snake_points[20];
     SPoint lastPoint;
+    SPoint newHeadPos;
     NSMutableArray *_snake_sprites;
     int current_length;
     int max_length;
@@ -30,10 +31,8 @@ typedef enum
 @property (nonatomic,retain) NSMutableArray *snake_sprites;
 
 -(CCSprite *)SpriteAtIndex:(int)index;
--(void)step;
+-(Boolean)step;
 -(void)changeDirection:(CGPoint)point;
 -(Boolean)canEatFood:(SPoint)point;
--(Boolean)isEatSelf;
--(Boolean)isClideWithAnotherSnake;
 -(SPoint)positionOfSnakeAtIndex:(int)index;
 @end

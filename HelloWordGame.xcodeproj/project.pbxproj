@@ -11,6 +11,8 @@
 		F404D0291709907300C66D5F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D0281709907200C66D5F /* World.m */; };
 		F404D02C1709929D00C66D5F /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02B1709929C00C66D5F /* GameLayer.m */; };
 		F404D0301709BFF700C66D5F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02F1709BFF600C66D5F /* Food.m */; };
+		F4176AD3170AB04A0032FFAD /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F4176AD1170AB04A0032FFAD /* food.png */; };
+		F4176AD4170AB04A0032FFAD /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = F4176AD2170AB04A0032FFAD /* snake.png */; };
 		F4DBA87D170805EF00599EA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA87C170805EF00599EA8 /* QuartzCore.framework */; };
 		F4DBA87F170805EF00599EA8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA87E170805EF00599EA8 /* OpenGLES.framework */; };
 		F4DBA881170805EF00599EA8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA880170805EF00599EA8 /* OpenAL.framework */; };
@@ -143,6 +145,7 @@
 		F4DBAA1E170805F200599EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA1D170805F200599EA8 /* AppDelegate.m */; };
 		F4DBAA21170805F200599EA8 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA20170805F200599EA8 /* HelloWorldLayer.m */; };
 		F4DBAA24170805F200599EA8 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA23170805F200599EA8 /* IntroLayer.m */; };
+		F4DE79C4170ACD3500252B5A /* AutoSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE79C3170ACD3500252B5A /* AutoSnake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +158,8 @@
 		F404D02E1709BFF600C66D5F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
 		F404D02F1709BFF600C66D5F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		F404D0311709C11000C66D5F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		F4176AD1170AB04A0032FFAD /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		F4176AD2170AB04A0032FFAD /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
 		F4DBA879170805EF00599EA8 /* HelloWordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DBA87C170805EF00599EA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F4DBA87E170805EF00599EA8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -433,6 +438,8 @@
 		F4DBAA20170805F200599EA8 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		F4DBAA22170805F200599EA8 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		F4DBAA23170805F200599EA8 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		F4DE79C2170ACD3500252B5A /* AutoSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoSnake.h; path = ../AutoSnake.h; sourceTree = "<group>"; };
+		F4DE79C3170ACD3500252B5A /* AutoSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoSnake.m; path = ../AutoSnake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,9 +462,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4176AD0170AB03C0032FFAD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F4176AD1170AB04A0032FFAD /* food.png */,
+				F4176AD2170AB04A0032FFAD /* snake.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F4DBA870170805EF00599EA8 = {
 			isa = PBXGroup;
 			children = (
+				F4176AD0170AB03C0032FFAD /* images */,
 				F404D0311709C11000C66D5F /* Constant.h */,
 				F4DBA88E170805EF00599EA8 /* HelloWordGame */,
 				F4DBA87B170805EF00599EA8 /* Frameworks */,
@@ -501,14 +518,16 @@
 				F4DBA88F170805EF00599EA8 /* Resources */,
 				F4DBA8A7170805EF00599EA8 /* libs */,
 				F4DBAA18170805F200599EA8 /* Supporting Files */,
-				F404D02117098B2F00C66D5F /* Snake.h */,
-				F404D02217098B2F00C66D5F /* Snake.m */,
 				F404D0271709907200C66D5F /* World.h */,
 				F404D0281709907200C66D5F /* World.m */,
 				F404D02A1709929C00C66D5F /* GameLayer.h */,
 				F404D02B1709929C00C66D5F /* GameLayer.m */,
 				F404D02E1709BFF600C66D5F /* Food.h */,
 				F404D02F1709BFF600C66D5F /* Food.m */,
+				F404D02117098B2F00C66D5F /* Snake.h */,
+				F404D02217098B2F00C66D5F /* Snake.m */,
+				F4DE79C2170ACD3500252B5A /* AutoSnake.h */,
+				F4DE79C3170ACD3500252B5A /* AutoSnake.m */,
 			);
 			path = HelloWordGame;
 			sourceTree = "<group>";
@@ -955,6 +974,8 @@
 				F4DBA8A3170805EF00599EA8 /* Icon@2x.png in Resources */,
 				F4DBA8A6170805EF00599EA8 /* iTunesArtwork in Resources */,
 				F4DBA9FC170805F200599EA8 /* ChangeLog in Resources */,
+				F4176AD3170AB04A0032FFAD /* food.png in Resources */,
+				F4176AD4170AB04A0032FFAD /* snake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1101,7 @@
 				F404D0291709907300C66D5F /* World.m in Sources */,
 				F404D02C1709929D00C66D5F /* GameLayer.m in Sources */,
 				F404D0301709BFF700C66D5F /* Food.m in Sources */,
+				F4DE79C4170ACD3500252B5A /* AutoSnake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1112,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG XIN NAN (7KTY256XRX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1102,6 +1125,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "E867B012-9741-4B7B-B3AF-5EEB70607B16";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1111,6 +1135,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG XIN NAN (7KTY256XRX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1121,6 +1146,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "E867B012-9741-4B7B-B3AF-5EEB70607B16";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

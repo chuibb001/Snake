@@ -16,13 +16,14 @@
     if(self)
     {
         srand ( time(NULL) );
+        food_count=10;
     }
     return self;
 }
 
-- (CCSprite *)setUpFoodPiece {
+- (CCSprite *)setUpFoodSprite {
     
-    CCSprite *food=[CCSprite spriteWithFile:@"Icon.png"];
+    foodSprite=[CCSprite spriteWithFile:@"food.png"];
     
     NSInteger col = 0;
     NSInteger row = 0;
@@ -32,14 +33,26 @@
         col = rand() % MAX_COLS;
         row = rand() % MAX_ROWS;
     //}
-    food.position = CGPointMake(38 + col * 20, 49 + row * 20);
+    foodSprite.position = CGPointMake(38 + col * 20, 49 + row * 20);
     position.x=col;
     position.y=row;
-    return  food;
+    return  foodSprite;
 }
 -(SPoint) getFoodPosition
 {
     return position;
 }
 
+- (CCSprite *)currentSprite
+{
+    return foodSprite;
+}
+- (void)decreaseFoodCount
+{
+    food_count--;
+}
+- (Boolean)isFoodRemaining
+{
+    return food_count==0;
+}
 @end
