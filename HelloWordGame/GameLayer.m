@@ -78,13 +78,13 @@
     float base = BASE_SPEED - BASE_SPEED/MAX_SPEED * currentSpeed;
         while (cumulation >= base)
         {
-            Boolean canStep=[snake step];
-            [autoSnake step];
+            //Boolean canStep=[snake step];
+            Boolean canStep=[autoSnake step:[food getFoodPosition]];
             if(canStep==NO)
                [self gameOver];
             else
             {
-                Boolean caneat=[snake canEatFood:[food getFoodPosition]];
+                Boolean caneat=[autoSnake canEatFood:[food getFoodPosition]];
                 if(caneat)
                 {
                     [self cleanFood];
