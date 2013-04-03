@@ -14,6 +14,9 @@
     int height;
 }
 
++(World *)sharedWorld;
+-(int)maxRow;
+-(int)maxCol;
 -(void)drawGameRect;
 -(CGPoint)PointTranslation:(int)row :(int)col;
 

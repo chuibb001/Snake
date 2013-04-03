@@ -78,18 +78,19 @@
 }
 -(void)changeDirection:(CGPoint)point
 {
-    CGFloat x=_snake_points[0].x*20+38;
-    CGFloat y=_snake_points[0].y*20+49;
+    /*CGFloat x=_snake_points[0].x*20+38;
+    CGFloat y=_snake_points[0].y*20+49;*/
+    CGPoint current=[[World sharedWorld] PointTranslation:_snake_points[0].x :_snake_points[0].y];
     if(current_direction==UP || current_direction==DOWN)
     {
-        if(point.x>x)
+        if(point.x>current.x)
             current_direction=RIGHT;
         else
             current_direction=LEFT;
     }
     else
     {
-        if(point.y>y)
+        if(point.y>current.y)
             current_direction=UP;
         else
             current_direction=DOWN;
@@ -113,7 +114,9 @@
 }
 -(Boolean)isKnockWall
 {
-    if(newHeadPos.x>MAX_COLS || newHeadPos.y>MAX_ROWS || newHeadPos.x<0 || newHeadPos.y<0 )
+    int max_col=[[World sharedWorld] maxCol];
+    int max_row=[[World sharedWorld] maxRow];
+    if(newHeadPos.x>max_col || newHeadPos.y>max_row || newHeadPos.x<0 || newHeadPos.y<0 )
     {
         return YES;
     }

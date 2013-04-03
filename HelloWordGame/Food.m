@@ -28,12 +28,16 @@
     NSInteger col = 0;
     NSInteger row = 0;
     
+    int max_col=[[World sharedWorld] maxCol];
+    int max_row=[[World sharedWorld] maxRow];
+    
     //while (true)
     //{
-        col = rand() % MAX_COLS;
-        row = rand() % MAX_ROWS;
+        col = rand() % max_col;
+        row = rand() % max_row;
     //}
-    foodSprite.position = CGPointMake(38 + col * 20, 49 + row * 20);
+    //foodSprite.position = CGPointMake(38 + col * 20, 49 + row * 20);
+    foodSprite.position=[[World sharedWorld] PointTranslation:col :row];
     position.x=col;
     position.y=row;
     return  foodSprite;

@@ -26,7 +26,7 @@
     {
         snake=[[Snake alloc] init];
         autoSnake=[[AutoSnake alloc] init];
-        world=[[World alloc] init];
+        world=[World sharedWorld];
         food=[[Food alloc] init];
         currentSpeed=1;
         self.touchEnabled=YES;
@@ -115,7 +115,8 @@
     {
         CCSprite *sprite=[[snake snake_sprites] objectAtIndex:i];
         SPoint point=[snake positionOfSnakeAtIndex:i];
-        sprite.position=CGPointMake(38 + point.x * 20, 49 + point.y * 20); // 把行列坐标转换成全局CGPoint
+        //sprite.position=CGPointMake(38 + point.x * 20, 49 + point.y * 20); // 把行列坐标转换成全局CGPoint
+        sprite.position=[world PointTranslation:point.x :point.y];
         if (![sprite parent])
         {
             [self addChild:sprite];
@@ -128,7 +129,8 @@
     {
         CCSprite *sprite=[[autoSnake snake_sprites] objectAtIndex:i];
         SPoint point=[autoSnake positionOfSnakeAtIndex:i];
-        sprite.position=CGPointMake(38 + point.x * 20, 49 + point.y * 20); // 把行列坐标转换成全局CGPoint
+        //sprite.position=CGPointMake(38 + point.x * 20, 49 + point.y * 20); // 把行列坐标转换成全局CGPoint
+        sprite.position=[world PointTranslation:point.x :point.y];
         if (![sprite parent])
         {
             [self addChild:sprite];

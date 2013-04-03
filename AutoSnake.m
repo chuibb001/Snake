@@ -219,7 +219,9 @@
 
 -(Boolean)isKnockWall
 {
-    if(newHeadPos.x>MAX_COLS || newHeadPos.y>MAX_ROWS || newHeadPos.x<0 || newHeadPos.y<0 )
+    int max_col=[[World sharedWorld] maxCol];
+    int max_row=[[World sharedWorld] maxRow];
+    if(newHeadPos.x>max_col || newHeadPos.y>max_row || newHeadPos.x<0 || newHeadPos.y<0 )
     {
         return YES;
     }
