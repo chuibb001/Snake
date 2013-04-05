@@ -26,10 +26,25 @@
             point.y=11;
             _snake_points[i]=point;
         }
+        CCSprite * head= [_snake_sprites objectAtIndex:0];
+        head.rotation=270;
         
     }
     return self;
 }
+
+-(CCSprite *)SpriteAtIndex:(int)index
+{
+    CCSprite *sprite;
+    if(index==0)
+        sprite=[CCSprite spriteWithFile:@"snake_green_head@2x.png"];
+    else if(index%2==0)
+        sprite=[CCSprite spriteWithFile:@"snake_green_light@2x.png"];
+    else
+        sprite=[CCSprite spriteWithFile:@"snake_green_dark@2x.png"];
+    return sprite;
+}
+
 
 -(Boolean)step:(SPoint)point
 {
@@ -212,6 +227,9 @@
         _snake_points[i]=_snake_points[i-1];
     }
     _snake_points[0]=newHeadPos;
+    
+    CCSprite *head=[_snake_sprites objectAtIndex:0];
+    head.rotation=current_direction*90;
     
     return YES;
     

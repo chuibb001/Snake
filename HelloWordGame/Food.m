@@ -23,7 +23,7 @@
 
 - (CCSprite *)setUpFoodSprite {
     
-    foodSprite=[CCSprite spriteWithFile:@"food.png"];
+    foodSprite=[CCSprite spriteWithFile:@"food@2x.png"];
     
     NSInteger col = 0;
     NSInteger row = 0;

@@ -21,6 +21,13 @@
     
     float currentSpeed;
     float cumulation;
+    
+    Boolean pause;
+    
+    float timeLeft;
+    
+    CCMenuItemFont *snake_score;
+    CCMenuItemFont *autosnake_score;
 }
 
 +(id)scene;

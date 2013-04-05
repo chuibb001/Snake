@@ -18,6 +18,7 @@
         max_length=20;
         current_length=3;
         current_direction=RIGHT;
+        self.numberOfFoodEatten=0;
         _snake_sprites=[[NSMutableArray alloc] init];
         for(int i=0;i<current_length;i++)
         {
@@ -28,6 +29,8 @@
             point.y=0;
             _snake_points[i]=point;
         }
+        CCSprite * head= [_snake_sprites objectAtIndex:0];
+        head.rotation=90;
         
     }
     return self;
@@ -35,7 +38,13 @@
 
 -(CCSprite *)SpriteAtIndex:(int)index
 {
-    CCSprite *sprite=[CCSprite spriteWithFile:@"snake.png"];
+    CCSprite *sprite;
+    if(index==0)
+        sprite=[CCSprite spriteWithFile:@"snake_blue_head@2x.png"];
+    else if(index%2==0)
+        sprite=[CCSprite spriteWithFile:@"snake_blue_light@2x.png"];
+    else
+        sprite=[CCSprite spriteWithFile:@"snake_blue_dark@2x.png"];
     return sprite;
 }
 
@@ -95,6 +104,8 @@
         else
             current_direction=DOWN;
     }
+    CCSprite *head=[_snake_sprites objectAtIndex:0];
+    head.rotation=current_direction*90;
 }
 -(Boolean)canEatFood:(SPoint)point
 {

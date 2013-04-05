@@ -17,7 +17,7 @@
 +(World *)sharedWorld;
 -(int)maxRow;
 -(int)maxCol;
--(void)drawGameRect;
+-(CCSprite *)gameBackgroundSprite;
 -(CGPoint)PointTranslation:(int)row :(int)col;
 
 @end

@@ -9,7 +9,6 @@
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "HelloWorldLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -36,31 +35,34 @@
 // 
 -(id) init
 {
-	if( (self=[super init])) {
-
-		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-        [self setTouchEnabled:YES];
-		CCSprite *background;
-		
-		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-			background = [CCSprite spriteWithFile:@"Default.png"];
-			background.rotation = 90;
-		} else {
-			background = [CCSprite spriteWithFile:@"Default-Landscape~ipad.png"];
-		}
-		background.position = ccp(size.width/2, size.height/2);
-
-		// add the label as a child to this Layer
-		[self addChild: background];
-	}
+	if( (self=[super init]))
+    {
+        CCLayerColor *backgroundColor=[CCLayerColor layerWithColor:ccc4(193, 219, 236, 255)];
+        [self addChild:backgroundColor z:-1];
+        
+        CCSprite *intro=[CCSprite spriteWithFile:@"intro@2x.png"];
+        intro.position=ccp([[CCDirector sharedDirector] winSize].width/2-50, 160);
+        [self addChild:intro];
+        CCMenuItemImage *playItem=[CCMenuItemImage itemWithNormalImage:@"play@2x.png" selectedImage:@"play@2x.png" target:self selector:@selector(Play)];
+        
+        //CCMenuItemFont *play=[CCMenuItemFont itemWithString:@"开始游戏" target:self selector:@selector(Play)];
+        //CCMenuItemFont *about=[CCMenuItemFont itemWithString:@"关于我们" target:self selector:@selector(Play)];
+        
+        CCMenu *menu = [CCMenu menuWithItems:playItem,nil];
+        menu.position=ccp([[CCDirector sharedDirector] winSize].width/2+160,50);
+        [self addChild:menu];
+    }
 	
 	return self;
 }
 
+-(void)Play
+{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene] ]];
+}
 -(void) onEnter
 {
 	[super onEnter];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene] ]];
+	
 }
 @end

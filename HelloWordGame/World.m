@@ -32,27 +32,20 @@
     else
         return 20;
 }
--(void)drawGameRect
+-(CCSprite *)gameBackgroundSprite
 {
-    //glDisable(GL_LINE_WIDTH);
-	glLineWidth( 1.0f );
-	//glColor4ub(0,0,0,255);
-    
-    CGRect gameRect;
+    CCSprite *background;
     if(iPhone5)
-        gameRect = CGRectMake(30, 40, 500, 240);
+    {
+        background=[CCSprite spriteWithFile:@"ganme_background2@2x.png"];
+        background.position=ccp([[CCDirector sharedDirector] winSize].width/2, [[CCDirector sharedDirector] winSize].height/2);
+    }
     else
-        gameRect = CGRectMake(34, 40, 420, 240);
-    CGPoint poli[]=
-    {gameRect.origin,
-        CGPointMake(gameRect.origin.x,gameRect.origin.y + gameRect.size.height),
-        CGPointMake(gameRect.origin.x + gameRect.size.width, gameRect.origin.y + gameRect.size.height),
-        CGPointMake(gameRect.origin.x + gameRect.size.width,gameRect.origin.y)};
-    
-	ccDrawLine(poli[0], poli[1]);
-	ccDrawLine(poli[1], poli[2]);
-	ccDrawLine(poli[2], poli[3]);
-	ccDrawLine(poli[3], poli[0]);
+    {
+        background=[CCSprite spriteWithFile:@"ganme_background@2x.png"];
+        background.position=ccp([[CCDirector sharedDirector] winSize].width/2, [[CCDirector sharedDirector] winSize].height/2);
+    }
+    return background;
 }
 
 -(CGPoint)PointTranslation:(int)row :(int)col

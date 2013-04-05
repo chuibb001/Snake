@@ -12,10 +12,10 @@
 #import "World.h"
 typedef enum
 {
+    UP,
     RIGHT,
     DOWN,
-    LEFT,
-    UP
+    LEFT
 } Direction;
 
 @interface Snake : NSObject
@@ -30,6 +30,7 @@ typedef enum
 }
 
 @property (nonatomic,retain) NSMutableArray *snake_sprites;
+@property (nonatomic,assign) int numberOfFoodEatten;
 
 -(CCSprite *)SpriteAtIndex:(int)index;
 -(Boolean)step;
