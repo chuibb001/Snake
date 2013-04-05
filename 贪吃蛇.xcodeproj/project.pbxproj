@@ -11,8 +11,20 @@
 		F404D0291709907300C66D5F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D0281709907200C66D5F /* World.m */; };
 		F404D02C1709929D00C66D5F /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02B1709929C00C66D5F /* GameLayer.m */; };
 		F404D0301709BFF700C66D5F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02F1709BFF600C66D5F /* Food.m */; };
-		F4176AD3170AB04A0032FFAD /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F4176AD1170AB04A0032FFAD /* food.png */; };
-		F4176AD4170AB04A0032FFAD /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = F4176AD2170AB04A0032FFAD /* snake.png */; };
+		F4C98ABE170E98D50060DF89 /* food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB0170E98D50060DF89 /* food@2x.png */; };
+		F4C98ABF170E98D50060DF89 /* ganme_background2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */; };
+		F4C98AC0170E98D50060DF89 /* ganme_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */; };
+		F4C98AC1170E98D50060DF89 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB3170E98D50060DF89 /* Icon@2x.png */; };
+		F4C98AC2170E98D50060DF89 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB4170E98D50060DF89 /* Icon.png */; };
+		F4C98AC3170E98D50060DF89 /* intro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB5170E98D50060DF89 /* intro@2x.png */; };
+		F4C98AC4170E98D50060DF89 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB6170E98D50060DF89 /* play@2x.png */; };
+		F4C98AC5170E98D50060DF89 /* snake_blue_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB7170E98D50060DF89 /* snake_blue_dark@2x.png */; };
+		F4C98AC6170E98D50060DF89 /* snake_blue_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB8170E98D50060DF89 /* snake_blue_head@2x.png */; };
+		F4C98AC7170E98D50060DF89 /* snake_blue_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB9170E98D50060DF89 /* snake_blue_light@2x.png */; };
+		F4C98AC8170E98D50060DF89 /* snake_green_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98ABA170E98D50060DF89 /* snake_green_dark@2x.png */; };
+		F4C98AC9170E98D50060DF89 /* snake_green_head@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98ABB170E98D50060DF89 /* snake_green_head@2x.png */; };
+		F4C98ACA170E98D50060DF89 /* snake_green_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98ABC170E98D50060DF89 /* snake_green_light@2x.png */; };
+		F4C98ACB170E98D50060DF89 /* world@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98ABD170E98D50060DF89 /* world@2x.png */; };
 		F4DBA87D170805EF00599EA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA87C170805EF00599EA8 /* QuartzCore.framework */; };
 		F4DBA87F170805EF00599EA8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA87E170805EF00599EA8 /* OpenGLES.framework */; };
 		F4DBA881170805EF00599EA8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA880170805EF00599EA8 /* OpenAL.framework */; };
@@ -26,12 +38,6 @@
 		F4DBA893170805EF00599EA8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA892170805EF00599EA8 /* Default@2x.png */; };
 		F4DBA895170805EF00599EA8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA894170805EF00599EA8 /* Default-568h@2x.png */; };
 		F4DBA897170805EF00599EA8 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */; };
-		F4DBA899170805EF00599EA8 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA898170805EF00599EA8 /* Icon-72.png */; };
-		F4DBA89B170805EF00599EA8 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA89A170805EF00599EA8 /* Icon-Small-50.png */; };
-		F4DBA89D170805EF00599EA8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA89C170805EF00599EA8 /* Icon-Small.png */; };
-		F4DBA89F170805EF00599EA8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA89E170805EF00599EA8 /* Icon-Small@2x.png */; };
-		F4DBA8A1170805EF00599EA8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA8A0170805EF00599EA8 /* Icon.png */; };
-		F4DBA8A3170805EF00599EA8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA8A2170805EF00599EA8 /* Icon@2x.png */; };
 		F4DBA8A6170805EF00599EA8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA8A5170805EF00599EA8 /* iTunesArtwork */; };
 		F4DBA8AB170805EF00599EA8 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBA8AA170805EF00599EA8 /* CCAction.m */; };
 		F4DBA8AE170805EF00599EA8 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBA8AD170805EF00599EA8 /* CCActionCamera.m */; };
@@ -143,24 +149,35 @@
 		F4DBAA16170805F200599EA8 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA15170805F200599EA8 /* vec4.c */; };
 		F4DBAA1B170805F200599EA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA1A170805F200599EA8 /* main.m */; };
 		F4DBAA1E170805F200599EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA1D170805F200599EA8 /* AppDelegate.m */; };
-		F4DBAA21170805F200599EA8 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA20170805F200599EA8 /* HelloWorldLayer.m */; };
 		F4DBAA24170805F200599EA8 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBAA23170805F200599EA8 /* IntroLayer.m */; };
 		F4DE79C4170ACD3500252B5A /* AutoSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE79C3170ACD3500252B5A /* AutoSnake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F404D02117098B2F00C66D5F /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
-		F404D02217098B2F00C66D5F /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
-		F404D0271709907200C66D5F /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
-		F404D0281709907200C66D5F /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
-		F404D02A1709929C00C66D5F /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
-		F404D02B1709929C00C66D5F /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLayer.m; sourceTree = "<group>"; };
-		F404D02E1709BFF600C66D5F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
-		F404D02F1709BFF600C66D5F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
-		F404D0311709C11000C66D5F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		F4176AD1170AB04A0032FFAD /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
-		F4176AD2170AB04A0032FFAD /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
-		F4DBA879170805EF00599EA8 /* HelloWordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F404D02117098B2F00C66D5F /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = HelloWordGame/Snake.h; sourceTree = "<group>"; };
+		F404D02217098B2F00C66D5F /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Snake.m; path = HelloWordGame/Snake.m; sourceTree = "<group>"; };
+		F404D0271709907200C66D5F /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = HelloWordGame/World.h; sourceTree = "<group>"; };
+		F404D0281709907200C66D5F /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = World.m; path = HelloWordGame/World.m; sourceTree = "<group>"; };
+		F404D02A1709929C00C66D5F /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = HelloWordGame/GameLayer.h; sourceTree = "<group>"; };
+		F404D02B1709929C00C66D5F /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = HelloWordGame/GameLayer.m; sourceTree = "<group>"; };
+		F404D02E1709BFF600C66D5F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = HelloWordGame/Food.h; sourceTree = "<group>"; };
+		F404D02F1709BFF600C66D5F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = HelloWordGame/Food.m; sourceTree = "<group>"; };
+		F404D0311709C11000C66D5F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
+		F4C98AB0170E98D50060DF89 /* food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food@2x.png"; sourceTree = "<group>"; };
+		F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ganme_background2@2x.png"; sourceTree = "<group>"; };
+		F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ganme_background@2x.png"; sourceTree = "<group>"; };
+		F4C98AB3170E98D50060DF89 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F4C98AB4170E98D50060DF89 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F4C98AB5170E98D50060DF89 /* intro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro@2x.png"; sourceTree = "<group>"; };
+		F4C98AB6170E98D50060DF89 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		F4C98AB7170E98D50060DF89 /* snake_blue_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_blue_dark@2x.png"; sourceTree = "<group>"; };
+		F4C98AB8170E98D50060DF89 /* snake_blue_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_blue_head@2x.png"; sourceTree = "<group>"; };
+		F4C98AB9170E98D50060DF89 /* snake_blue_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_blue_light@2x.png"; sourceTree = "<group>"; };
+		F4C98ABA170E98D50060DF89 /* snake_green_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_green_dark@2x.png"; sourceTree = "<group>"; };
+		F4C98ABB170E98D50060DF89 /* snake_green_head@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_green_head@2x.png"; sourceTree = "<group>"; };
+		F4C98ABC170E98D50060DF89 /* snake_green_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake_green_light@2x.png"; sourceTree = "<group>"; };
+		F4C98ABD170E98D50060DF89 /* world@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world@2x.png"; sourceTree = "<group>"; };
+		F4DBA879170805EF00599EA8 /* 贪吃蛇.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "贪吃蛇.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DBA87C170805EF00599EA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F4DBA87E170805EF00599EA8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F4DBA880170805EF00599EA8 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -174,12 +191,6 @@
 		F4DBA892170805EF00599EA8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		F4DBA894170805EF00599EA8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		F4DBA898170805EF00599EA8 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
-		F4DBA89A170805EF00599EA8 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
-		F4DBA89C170805EF00599EA8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
-		F4DBA89E170805EF00599EA8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		F4DBA8A0170805EF00599EA8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
-		F4DBA8A2170805EF00599EA8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		F4DBA8A4170805EF00599EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		F4DBA8A5170805EF00599EA8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		F4DBA8A9170805EF00599EA8 /* CCAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAction.h; path = libs/cocos2d/CCAction.h; sourceTree = "<group>"; };
@@ -434,12 +445,10 @@
 		F4DBAA1A170805F200599EA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4DBAA1C170805F200599EA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4DBAA1D170805F200599EA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F4DBAA1F170805F200599EA8 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		F4DBAA20170805F200599EA8 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		F4DBAA22170805F200599EA8 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		F4DBAA23170805F200599EA8 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		F4DE79C2170ACD3500252B5A /* AutoSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoSnake.h; path = ../AutoSnake.h; sourceTree = "<group>"; };
-		F4DE79C3170ACD3500252B5A /* AutoSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoSnake.m; path = ../AutoSnake.m; sourceTree = "<group>"; };
+		F4DBAA22170805F200599EA8 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroLayer.h; path = HelloWordGame/IntroLayer.h; sourceTree = "<group>"; };
+		F4DBAA23170805F200599EA8 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroLayer.m; path = HelloWordGame/IntroLayer.m; sourceTree = "<group>"; };
+		F4DE79C2170ACD3500252B5A /* AutoSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnake.h; sourceTree = "<group>"; };
+		F4DE79C3170ACD3500252B5A /* AutoSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,20 +471,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F4176AD0170AB03C0032FFAD /* images */ = {
+		F4C98AAF170E98D40060DF89 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				F4176AD1170AB04A0032FFAD /* food.png */,
-				F4176AD2170AB04A0032FFAD /* snake.png */,
+				F4C98AB0170E98D50060DF89 /* food@2x.png */,
+				F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */,
+				F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */,
+				F4C98AB3170E98D50060DF89 /* Icon@2x.png */,
+				F4C98AB4170E98D50060DF89 /* Icon.png */,
+				F4C98AB5170E98D50060DF89 /* intro@2x.png */,
+				F4C98AB6170E98D50060DF89 /* play@2x.png */,
+				F4C98AB7170E98D50060DF89 /* snake_blue_dark@2x.png */,
+				F4C98AB8170E98D50060DF89 /* snake_blue_head@2x.png */,
+				F4C98AB9170E98D50060DF89 /* snake_blue_light@2x.png */,
+				F4C98ABA170E98D50060DF89 /* snake_green_dark@2x.png */,
+				F4C98ABB170E98D50060DF89 /* snake_green_head@2x.png */,
+				F4C98ABC170E98D50060DF89 /* snake_green_light@2x.png */,
+				F4C98ABD170E98D50060DF89 /* world@2x.png */,
 			);
-			name = images;
+			path = images;
+			sourceTree = "<group>";
+		};
+		F4D4977D170C2A610000B26A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F404D0271709907200C66D5F /* World.h */,
+				F404D0281709907200C66D5F /* World.m */,
+				F404D02E1709BFF600C66D5F /* Food.h */,
+				F404D02F1709BFF600C66D5F /* Food.m */,
+				F404D02117098B2F00C66D5F /* Snake.h */,
+				F404D02217098B2F00C66D5F /* Snake.m */,
+				F4DE79C2170ACD3500252B5A /* AutoSnake.h */,
+				F4DE79C3170ACD3500252B5A /* AutoSnake.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		F4D4977E170C2A6E0000B26A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F4DBAA22170805F200599EA8 /* IntroLayer.h */,
+				F4DBAA23170805F200599EA8 /* IntroLayer.m */,
+				F404D02A1709929C00C66D5F /* GameLayer.h */,
+				F404D02B1709929C00C66D5F /* GameLayer.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		F4DBA870170805EF00599EA8 = {
 			isa = PBXGroup;
 			children = (
-				F4176AD0170AB03C0032FFAD /* images */,
-				F404D0311709C11000C66D5F /* Constant.h */,
+				F4C98AAF170E98D40060DF89 /* images */,
+				F4D4977E170C2A6E0000B26A /* Scenes */,
+				F4D4977D170C2A610000B26A /* Objects */,
 				F4DBA88E170805EF00599EA8 /* HelloWordGame */,
 				F4DBA87B170805EF00599EA8 /* Frameworks */,
 				F4DBA87A170805EF00599EA8 /* Products */,
@@ -485,7 +533,7 @@
 		F4DBA87A170805EF00599EA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4DBA879170805EF00599EA8 /* HelloWordGame.app */,
+				F4DBA879170805EF00599EA8 /* 贪吃蛇.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -509,25 +557,12 @@
 		F4DBA88E170805EF00599EA8 /* HelloWordGame */ = {
 			isa = PBXGroup;
 			children = (
+				F404D0311709C11000C66D5F /* Constant.h */,
 				F4DBAA1C170805F200599EA8 /* AppDelegate.h */,
 				F4DBAA1D170805F200599EA8 /* AppDelegate.m */,
-				F4DBAA1F170805F200599EA8 /* HelloWorldLayer.h */,
-				F4DBAA20170805F200599EA8 /* HelloWorldLayer.m */,
-				F4DBAA22170805F200599EA8 /* IntroLayer.h */,
-				F4DBAA23170805F200599EA8 /* IntroLayer.m */,
 				F4DBA88F170805EF00599EA8 /* Resources */,
 				F4DBA8A7170805EF00599EA8 /* libs */,
 				F4DBAA18170805F200599EA8 /* Supporting Files */,
-				F404D0271709907200C66D5F /* World.h */,
-				F404D0281709907200C66D5F /* World.m */,
-				F404D02A1709929C00C66D5F /* GameLayer.h */,
-				F404D02B1709929C00C66D5F /* GameLayer.m */,
-				F404D02E1709BFF600C66D5F /* Food.h */,
-				F404D02F1709BFF600C66D5F /* Food.m */,
-				F404D02117098B2F00C66D5F /* Snake.h */,
-				F404D02217098B2F00C66D5F /* Snake.m */,
-				F4DE79C2170ACD3500252B5A /* AutoSnake.h */,
-				F4DE79C3170ACD3500252B5A /* AutoSnake.m */,
 			);
 			path = HelloWordGame;
 			sourceTree = "<group>";
@@ -539,12 +574,6 @@
 				F4DBA892170805EF00599EA8 /* Default@2x.png */,
 				F4DBA894170805EF00599EA8 /* Default-568h@2x.png */,
 				F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */,
-				F4DBA898170805EF00599EA8 /* Icon-72.png */,
-				F4DBA89A170805EF00599EA8 /* Icon-Small-50.png */,
-				F4DBA89C170805EF00599EA8 /* Icon-Small.png */,
-				F4DBA89E170805EF00599EA8 /* Icon-Small@2x.png */,
-				F4DBA8A0170805EF00599EA8 /* Icon.png */,
-				F4DBA8A2170805EF00599EA8 /* Icon@2x.png */,
 				F4DBA8A4170805EF00599EA8 /* Info.plist */,
 				F4DBA8A5170805EF00599EA8 /* iTunesArtwork */,
 			);
@@ -914,9 +943,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4DBA878170805EF00599EA8 /* HelloWordGame */ = {
+		F4DBA878170805EF00599EA8 /* 贪吃蛇 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4DBAA27170805F200599EA8 /* Build configuration list for PBXNativeTarget "HelloWordGame" */;
+			buildConfigurationList = F4DBAA27170805F200599EA8 /* Build configuration list for PBXNativeTarget "贪吃蛇" */;
 			buildPhases = (
 				F4DBA875170805EF00599EA8 /* Sources */,
 				F4DBA876170805EF00599EA8 /* Frameworks */,
@@ -926,9 +955,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWordGame;
+			name = "贪吃蛇";
 			productName = HelloWordGame;
-			productReference = F4DBA879170805EF00599EA8 /* HelloWordGame.app */;
+			productReference = F4DBA879170805EF00599EA8 /* 贪吃蛇.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -940,7 +969,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = simon;
 			};
-			buildConfigurationList = F4DBA874170805EF00599EA8 /* Build configuration list for PBXProject "HelloWordGame" */;
+			buildConfigurationList = F4DBA874170805EF00599EA8 /* Build configuration list for PBXProject "贪吃蛇" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -952,7 +981,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4DBA878170805EF00599EA8 /* HelloWordGame */,
+				F4DBA878170805EF00599EA8 /* 贪吃蛇 */,
 			);
 		};
 /* End PBXProject section */
@@ -966,16 +995,22 @@
 				F4DBA893170805EF00599EA8 /* Default@2x.png in Resources */,
 				F4DBA895170805EF00599EA8 /* Default-568h@2x.png in Resources */,
 				F4DBA897170805EF00599EA8 /* Default-Landscape~ipad.png in Resources */,
-				F4DBA899170805EF00599EA8 /* Icon-72.png in Resources */,
-				F4DBA89B170805EF00599EA8 /* Icon-Small-50.png in Resources */,
-				F4DBA89D170805EF00599EA8 /* Icon-Small.png in Resources */,
-				F4DBA89F170805EF00599EA8 /* Icon-Small@2x.png in Resources */,
-				F4DBA8A1170805EF00599EA8 /* Icon.png in Resources */,
-				F4DBA8A3170805EF00599EA8 /* Icon@2x.png in Resources */,
 				F4DBA8A6170805EF00599EA8 /* iTunesArtwork in Resources */,
 				F4DBA9FC170805F200599EA8 /* ChangeLog in Resources */,
-				F4176AD3170AB04A0032FFAD /* food.png in Resources */,
-				F4176AD4170AB04A0032FFAD /* snake.png in Resources */,
+				F4C98ABE170E98D50060DF89 /* food@2x.png in Resources */,
+				F4C98ABF170E98D50060DF89 /* ganme_background2@2x.png in Resources */,
+				F4C98AC0170E98D50060DF89 /* ganme_background@2x.png in Resources */,
+				F4C98AC1170E98D50060DF89 /* Icon@2x.png in Resources */,
+				F4C98AC2170E98D50060DF89 /* Icon.png in Resources */,
+				F4C98AC3170E98D50060DF89 /* intro@2x.png in Resources */,
+				F4C98AC4170E98D50060DF89 /* play@2x.png in Resources */,
+				F4C98AC5170E98D50060DF89 /* snake_blue_dark@2x.png in Resources */,
+				F4C98AC6170E98D50060DF89 /* snake_blue_head@2x.png in Resources */,
+				F4C98AC7170E98D50060DF89 /* snake_blue_light@2x.png in Resources */,
+				F4C98AC8170E98D50060DF89 /* snake_green_dark@2x.png in Resources */,
+				F4C98AC9170E98D50060DF89 /* snake_green_head@2x.png in Resources */,
+				F4C98ACA170E98D50060DF89 /* snake_green_light@2x.png in Resources */,
+				F4C98ACB170E98D50060DF89 /* world@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,7 +1130,6 @@
 				F4DBAA16170805F200599EA8 /* vec4.c in Sources */,
 				F4DBAA1B170805F200599EA8 /* main.m in Sources */,
 				F4DBAA1E170805F200599EA8 /* AppDelegate.m in Sources */,
-				F4DBAA21170805F200599EA8 /* HelloWorldLayer.m in Sources */,
 				F4DBAA24170805F200599EA8 /* IntroLayer.m in Sources */,
 				F404D02317098B2F00C66D5F /* Snake.m in Sources */,
 				F404D0291709907300C66D5F /* World.m in Sources */,
@@ -1112,8 +1146,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG XIN NAN (7KTY256XRX)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG XIN NAN";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG XIN NAN";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1125,7 +1159,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "E867B012-9741-4B7B-B3AF-5EEB70607B16";
+				PROVISIONING_PROFILE = "27D4E426-242E-418E-B627-B6558C4A942C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27D4E426-242E-418E-B627-B6558C4A942C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1135,8 +1170,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG XIN NAN (7KTY256XRX)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG XIN NAN";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG XIN NAN";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1146,7 +1181,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "E867B012-9741-4B7B-B3AF-5EEB70607B16";
+				PROVISIONING_PROFILE = "27D4E426-242E-418E-B627-B6558C4A942C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27D4E426-242E-418E-B627-B6558C4A942C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1167,7 +1203,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "贪吃蛇";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1186,7 +1222,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "贪吃蛇";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1195,7 +1231,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4DBA874170805EF00599EA8 /* Build configuration list for PBXProject "HelloWordGame" */ = {
+		F4DBA874170805EF00599EA8 /* Build configuration list for PBXProject "贪吃蛇" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4DBAA25170805F200599EA8 /* Debug */,
@@ -1204,7 +1240,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4DBAA27170805F200599EA8 /* Build configuration list for PBXNativeTarget "HelloWordGame" */ = {
+		F4DBAA27170805F200599EA8 /* Build configuration list for PBXNativeTarget "贪吃蛇" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4DBAA28170805F200599EA8 /* Debug */,

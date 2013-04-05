@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4DBA878170805EF00599EA8"
-               BuildableName = "HelloWordGame.app"
-               BlueprintName = "HelloWordGame"
-               ReferencedContainer = "container:HelloWordGame.xcodeproj">
+               BuildableName = "&#36138;&#21507;&#34503;.app"
+               BlueprintName = "&#36138;&#21507;&#34503;"
+               ReferencedContainer = "container:&#36138;&#21507;&#34503;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DBA878170805EF00599EA8"
-            BuildableName = "HelloWordGame.app"
-            BlueprintName = "HelloWordGame"
-            ReferencedContainer = "container:HelloWordGame.xcodeproj">
+            BuildableName = "&#36138;&#21507;&#34503;.app"
+            BlueprintName = "&#36138;&#21507;&#34503;"
+            ReferencedContainer = "container:&#36138;&#21507;&#34503;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DBA878170805EF00599EA8"
-            BuildableName = "HelloWordGame.app"
-            BlueprintName = "HelloWordGame"
-            ReferencedContainer = "container:HelloWordGame.xcodeproj">
+            BuildableName = "&#36138;&#21507;&#34503;.app"
+            BlueprintName = "&#36138;&#21507;&#34503;"
+            ReferencedContainer = "container:&#36138;&#21507;&#34503;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DBA878170805EF00599EA8"
-            BuildableName = "HelloWordGame.app"
-            BlueprintName = "HelloWordGame"
-            ReferencedContainer = "container:HelloWordGame.xcodeproj">
+            BuildableName = "&#36138;&#21507;&#34503;.app"
+            BlueprintName = "&#36138;&#21507;&#34503;"
+            ReferencedContainer = "container:&#36138;&#21507;&#34503;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
