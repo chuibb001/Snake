@@ -11,6 +11,7 @@
 		F404D0291709907300C66D5F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D0281709907200C66D5F /* World.m */; };
 		F404D02C1709929D00C66D5F /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02B1709929C00C66D5F /* GameLayer.m */; };
 		F404D0301709BFF700C66D5F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02F1709BFF600C66D5F /* Food.m */; };
+		F43D7D1017BF7E2300D5FDB1 /* LoadingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D7D0F17BF7E2300D5FDB1 /* LoadingScene.m */; };
 		F4C98ABE170E98D50060DF89 /* food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB0170E98D50060DF89 /* food@2x.png */; };
 		F4C98ABF170E98D50060DF89 /* ganme_background2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */; };
 		F4C98AC0170E98D50060DF89 /* ganme_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */; };
@@ -163,6 +164,8 @@
 		F404D02E1709BFF600C66D5F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = HelloWordGame/Food.h; sourceTree = "<group>"; };
 		F404D02F1709BFF600C66D5F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = HelloWordGame/Food.m; sourceTree = "<group>"; };
 		F404D0311709C11000C66D5F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
+		F43D7D0E17BF7E2300D5FDB1 /* LoadingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingScene.h; path = HelloWordGame/LoadingScene.h; sourceTree = "<group>"; };
+		F43D7D0F17BF7E2300D5FDB1 /* LoadingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingScene.m; path = HelloWordGame/LoadingScene.m; sourceTree = "<group>"; };
 		F4C98AB0170E98D50060DF89 /* food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food@2x.png"; sourceTree = "<group>"; };
 		F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ganme_background2@2x.png"; sourceTree = "<group>"; };
 		F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ganme_background@2x.png"; sourceTree = "<group>"; };
@@ -510,6 +513,8 @@
 		F4D4977E170C2A6E0000B26A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F43D7D0E17BF7E2300D5FDB1 /* LoadingScene.h */,
+				F43D7D0F17BF7E2300D5FDB1 /* LoadingScene.m */,
 				F4DBAA22170805F200599EA8 /* IntroLayer.h */,
 				F4DBAA23170805F200599EA8 /* IntroLayer.m */,
 				F404D02A1709929C00C66D5F /* GameLayer.h */,
@@ -1136,6 +1141,7 @@
 				F404D02C1709929D00C66D5F /* GameLayer.m in Sources */,
 				F404D0301709BFF700C66D5F /* Food.m in Sources */,
 				F4DE79C4170ACD3500252B5A /* AutoSnake.m in Sources */,
+				F43D7D1017BF7E2300D5FDB1 /* LoadingScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@
 	return scene;
 }
 
-// 
+//
 -(id) init
 {
 	if( (self=[super init]))
@@ -58,7 +58,9 @@
 
 -(void)Play
 {
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene] ]];
+    //[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameLayer scene] ]];
+    [[CCDirector sharedDirector] replaceScene:[LoadingScene sceneWithTargetScene:TargetSceneTypeMain]];
+    
 }
 -(void) onEnter
 {
