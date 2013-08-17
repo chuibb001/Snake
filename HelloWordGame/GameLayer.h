@@ -18,10 +18,7 @@
     AutoSnake *autoSnake;
     World *world;
     Food *food;
-    
-    float currentSpeed;
-    float cumulation;
-    
+        
     Boolean pause;
     
     float timeLeft;

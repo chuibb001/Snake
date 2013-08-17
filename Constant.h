@@ -9,7 +9,7 @@
 #define MAX_COLS    20
 #define MAX_ROWS    11
 #define MAX_SPEED   10
-#define BASE_SPEED  0.2
+#define BASE_SPEED  0.3
 
 typedef struct
 {

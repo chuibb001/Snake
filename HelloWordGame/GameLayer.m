@@ -7,8 +7,6 @@
 //
 
 #import "GameLayer.h"
-#define MAX_SPEED   10
-#define BASE_SPEED  0.2
 
 @implementation GameLayer
 
@@ -28,7 +26,7 @@
         autoSnake=[[AutoSnake alloc] init];
         world=[World sharedWorld];
         food=[[Food alloc] init];
-        currentSpeed=1;
+        
         self.touchEnabled=YES;
         pause=NO;
         timeLeft=3.0;
@@ -173,47 +171,62 @@
 }
 
 #pragma mark 刷新
--(void)update:(ccTime)delta
-{
-    cumulation += delta;
-    float base = BASE_SPEED - BASE_SPEED/MAX_SPEED * currentSpeed;
-        while (cumulation >= base)
+-(void)update:(ccTime)delta // 每一帧都调用,delta表示上一次调用后过去的时间,现在是1/30
+{   
+    snake.cumulation += delta;
+    autoSnake.cumulation += delta;
+    
+    // 加速变量
+    float snakeBase = BASE_SPEED - BASE_SPEED/MAX_SPEED * snake.speed;
+    float autoSnakeBase = BASE_SPEED - BASE_SPEED/MAX_SPEED * autoSnake.speed;
+    
+    // 计算玩家蛇
+    if(snake.cumulation >=snakeBase)
+    {
+        if(![snake step:autoSnake])
+            [self gameOver];
+        else
         {
-            Boolean canStep1=[snake step];
-            Boolean canStep2=[autoSnake step:[food getFoodPosition]];
-            if(canStep1==NO)
-               [self gameOver];
-            else
+            if([snake canEatFood:[food getFoodPosition]])
             {
-                Boolean caneat1=[snake canEatFood:[food getFoodPosition]];
-                Boolean caneat2=[autoSnake canEatFood:[food getFoodPosition]];
-                if(caneat1 || caneat2)
-                {
-                    [self cleanFood];
-                    [self drawFood];
-                    [food decreaseFoodCount];
-                    // 谁吃的谁加分
-                    if(caneat1 && !caneat2)
-                    {
-                        snake.numberOfFoodEatten++;
-                        [self setSnakeScore:snake.numberOfFoodEatten];
-                    }
-                    else if(caneat2 && !caneat1)
-                    {
-                        autoSnake.numberOfFoodEatten++;
-                        [self setAutoSnakeScore:autoSnake.numberOfFoodEatten];
-                    }
-                    
-                    // 食物吃完了，判断谁赢
-                    if([food isFoodRemaining])
-                        [self decideWhoWin];
-                    
-                    currentSpeed=currentSpeed+0.6;
-                }
+                [self cleanFood];  // 清除食物并绘制新食物
+                [self drawFood];
+                [food decreaseFoodCount];
+                snake.numberOfFoodEatten++;
+                [self setSnakeScore:snake.numberOfFoodEatten];
+                // 食物吃完了，判断谁赢
+                if([food isFoodRemaining])
+                    [self decideWhoWin];
+                
+                snake.speed += 0.6;
             }
-            
-            cumulation =0;
         }
+        snake.cumulation = 0.0;
+    }
+    
+    // 计算自动蛇
+    if(autoSnake.cumulation >=autoSnakeBase)
+    {
+        if(![autoSnake step:[food getFoodPosition] andAnotherSnake:snake])
+            [self gameOver];
+        else
+        {
+            if([autoSnake canEatFood:[food getFoodPosition]])
+            {
+                [self cleanFood];  // 清除食物并绘制新食物
+                [self drawFood];
+                [food decreaseFoodCount];
+                autoSnake.numberOfFoodEatten++;
+                [self setSnakeScore:autoSnake.numberOfFoodEatten];
+                // 食物吃完了，判断谁赢
+                if([food isFoodRemaining])
+                    [self decideWhoWin];
+                
+                autoSnake.speed += 0.6;
+            }
+        }
+        autoSnake.cumulation = 0.0;
+    }
     
 }
 

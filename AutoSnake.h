@@ -10,5 +10,6 @@
 
 @interface AutoSnake : Snake
 
--(Boolean)step:(SPoint)point;
+-(Boolean)step:(SPoint)point andAnotherSnake:(Snake *)another;
+
 @end

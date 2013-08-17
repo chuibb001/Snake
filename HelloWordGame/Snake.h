@@ -24,17 +24,23 @@ typedef enum
     SPoint lastPoint;
     SPoint newHeadPos;
     NSMutableArray *_snake_sprites;
-    int current_length;
+    int _current_length;
     int max_length;
     Direction current_direction;
 }
 
 @property (nonatomic,retain) NSMutableArray *snake_sprites;
 @property (nonatomic,assign) int numberOfFoodEatten;
+@property (nonatomic,assign) int current_length;
+@property (nonatomic,assign) float speed;
+@property (nonatomic,assign) float cumulation; // 时间的累积量,不用每一帧都update
 
 -(CCSprite *)SpriteAtIndex:(int)index;
--(Boolean)step;
+-(Boolean)step:(Snake *)another;
 -(void)changeDirection:(CGPoint)point;
 -(Boolean)canEatFood:(SPoint)point;
 -(SPoint)positionOfSnakeAtIndex:(int)index;
+// c数组getter
+-(SPoint *)getSnakePoints;
+-(Boolean)isClideWithAnotherSnake:(Snake *)anotherSnake;
 @end

@@ -16,11 +16,11 @@
     self = [super init];
     if (self) {
         max_length=20;
-        current_length=3;
+        _current_length=3;
         current_direction=RIGHT;
         self.numberOfFoodEatten=0;
         _snake_sprites=[[NSMutableArray alloc] init];
-        for(int i=0;i<current_length;i++)
+        for(int i=0;i<_current_length;i++)
         {
             CCSprite *sprite=[self SpriteAtIndex:i];
             [_snake_sprites addObject:sprite];
@@ -31,7 +31,8 @@
         }
         CCSprite * head= [_snake_sprites objectAtIndex:0];
         head.rotation=90;
-        
+        _speed = 1.0f;
+        _cumulation = 0.0f;
     }
     return self;
 }
@@ -48,7 +49,7 @@
     return sprite;
 }
 
--(Boolean)step
+-(Boolean)step:(Snake *)another
 {
     newHeadPos=_snake_points[0];
     switch (current_direction)
@@ -68,7 +69,7 @@
         default:
             break;
     }
-    lastPoint=_snake_points[current_length-1];
+    lastPoint=_snake_points[_current_length-1];
     
     if([self isKnockWall])  // 撞墙
         return NO;
@@ -76,7 +77,10 @@
     if([self isEatSelf]) // 撞自己
         return NO;
     
-    for (int i = current_length - 1; i > 0; i--)  
+    if([self isClideWithAnotherSnake:another])  // 撞到另一条蛇
+        return NO;
+    
+    for (int i = _current_length - 1; i > 0; i--)  
     {
         _snake_points[i]=_snake_points[i-1];
     }
@@ -112,9 +116,9 @@
     if(point.x==_snake_points[0].x &&point.y==_snake_points[0].y)
     {
         
-        _snake_points[current_length]=lastPoint;
-        CCSprite *sprite=[self SpriteAtIndex:current_length];
-        current_length++;
+        _snake_points[_current_length]=lastPoint;
+        CCSprite *sprite=[self SpriteAtIndex:_current_length];
+        _current_length++;
         [_snake_sprites addObject:sprite];
         return YES;
     }
@@ -136,19 +140,36 @@
 }
 -(Boolean)isEatSelf
 {
-    for (int i = current_length - 1; i > 0; i--) // 撞自己
+    for (int i = _current_length - 1; i > 0; i--) // 撞自己
     {
         if(newHeadPos.x==_snake_points[i].x && newHeadPos.y==_snake_points[i].y)
             return YES;
     }
     return NO;
 }
--(Boolean)isClideWithAnotherSnake
+-(SPoint *)getSnakePoints
 {
+    return _snake_points;
+}
+-(Boolean)isClideWithAnotherSnake:(Snake *)anotherSnake
+{
+    SPoint *anotheSnakePoints = [anotherSnake getSnakePoints];
+    int anotheSnakeLength = anotherSnake.current_length;
     
+    for(int i = 0;i < anotheSnakeLength;i ++)
+    {
+        if([self isColide:anotheSnakePoints[i] b:newHeadPos])
+            return YES;
+    }
+    return NO;
 }
 -(SPoint)positionOfSnakeAtIndex:(int)index
 {
     return _snake_points[index];
+}
+
+-(BOOL)isColide:(SPoint)a b:(SPoint)b
+{
+    return ((a.x == b.x) && (a.y == b.y));
 }
 @end

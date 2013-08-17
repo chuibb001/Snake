@@ -14,10 +14,10 @@
     self = [super init];
     if (self) {
         max_length=20;
-        current_length=3;
+        _current_length=3;
         current_direction=LEFT;
         _snake_sprites=[[NSMutableArray alloc] init];
-        for(int i=0;i<current_length;i++)
+        for(int i=0;i<_current_length;i++)
         {
             CCSprite *sprite=[self SpriteAtIndex:i];
             [_snake_sprites addObject:sprite];
@@ -46,7 +46,7 @@
 }
 
 
--(Boolean)step:(SPoint)point
+-(Boolean)step:(SPoint)point andAnotherSnake:(Snake *)another
 {
     newHeadPos=_snake_points[0];
     int a=point.x-newHeadPos.x;
@@ -214,7 +214,7 @@
     }
 
     
-    lastPoint=_snake_points[current_length-1];
+    lastPoint=_snake_points[_current_length-1];
     
     if([self isKnockWall])  // 撞墙
         return NO;
@@ -222,7 +222,10 @@
     if([self isEatSelf]) // 撞自己
         return NO;
     
-    for (int i = current_length - 1; i > 0; i--)
+    if([self isClideWithAnotherSnake:another]) // 撞其他蛇
+        return NO;
+    
+    for (int i = _current_length - 1; i > 0; i--)
     {
         _snake_points[i]=_snake_points[i-1];
     }
@@ -248,7 +251,7 @@
 }
 -(Boolean)isEatSelf
 {
-    for (int i = current_length - 1; i > 0; i--) // 撞自己
+    for (int i = _current_length - 1; i > 0; i--) // 撞自己
     {
         if(newHeadPos.x==_snake_points[i].x && newHeadPos.y==_snake_points[i].y)
             return YES;
