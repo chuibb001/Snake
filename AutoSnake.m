@@ -64,9 +64,19 @@
                 break;
             case DOWN:
                 newHeadPos.y--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = LEFT;
+                    newHeadPos.y++;
+                }
                 break;
             case LEFT:
                 newHeadPos.x--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = DOWN;
+                    newHeadPos.x++;
+                }
                 break;
             default:
                 break;
@@ -81,9 +91,19 @@
                 break;
             case RIGHT:
                 newHeadPos.x++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = DOWN;
+                    newHeadPos.x--;
+                }
                 break;
             case DOWN:
                 newHeadPos.y--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = RIGHT;
+                    newHeadPos.y++;
+                }
                 break;
             case LEFT:
                 current_direction=DOWN;
@@ -98,9 +118,19 @@
         {
             case UP:
                 newHeadPos.y++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = RIGHT;
+                    newHeadPos.y--;
+                }
                 break;
             case RIGHT:
                 newHeadPos.x++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = UP;
+                    newHeadPos.x--;
+                }
                 break;
             case DOWN:
                 current_direction=RIGHT;
@@ -118,6 +148,11 @@
         {
             case UP:
                 newHeadPos.y++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = LEFT;
+                    newHeadPos.y--;
+                }
                 break;
             case RIGHT:
                 current_direction=UP;
@@ -127,6 +162,11 @@
                 break;
             case LEFT:
                 newHeadPos.x--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = UP;
+                    newHeadPos.x++;
+                }
                 break;
             default:
                 break;
@@ -147,6 +187,11 @@
                 break;
             case LEFT:
                 newHeadPos.x--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = DOWN;
+                    newHeadPos.x++;
+                }
                 break;
             default:
                 break;
@@ -164,6 +209,11 @@
                 break;
             case DOWN:
                 newHeadPos.y--;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = LEFT;
+                    newHeadPos.y++;
+                }
                 break;
             case LEFT:
                 current_direction=DOWN;
@@ -181,6 +231,11 @@
                 break;
             case RIGHT:
                 newHeadPos.x++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = DOWN;
+                    newHeadPos.x--;
+                }
                 break;
             case DOWN:
                 current_direction=RIGHT;
@@ -198,6 +253,11 @@
         {
             case UP:
                 newHeadPos.y++;
+                if([self isClideWithAnotherSnake:another])
+                {
+                    current_direction = RIGHT;
+                    newHeadPos.y--;
+                }
                 break;
             case RIGHT:
                 current_direction=UP;
@@ -222,8 +282,6 @@
     if([self isEatSelf]) // 撞自己
         return NO;
     
-    if([self isClideWithAnotherSnake:another]) // 撞其他蛇
-        return NO;
     
     for (int i = _current_length - 1; i > 0; i--)
     {
