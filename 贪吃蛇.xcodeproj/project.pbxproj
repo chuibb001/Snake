@@ -12,6 +12,7 @@
 		561BB66517C7857000F902F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66217C7857000F902F6 /* Default.png */; };
 		561BB66617C7857000F902F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66317C7857000F902F6 /* Default@2x.png */; };
 		561BB66817C787B300F902F6 /* playButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66717C787B300F902F6 /* playButton@2x.png */; };
+		561BB66A17C78E6200F902F6 /* scoreBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66917C78E6200F902F6 /* scoreBackground@2x.png */; };
 		561CD11617C6347100AF3791 /* AutoSnakeV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CD11417C6225E00AF3791 /* AutoSnakeV2.m */; };
 		F404D02317098B2F00C66D5F /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02217098B2F00C66D5F /* Snake.m */; };
 		F404D0291709907300C66D5F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D0281709907200C66D5F /* World.m */; };
@@ -163,6 +164,7 @@
 		561BB66217C7857000F902F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		561BB66317C7857000F902F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		561BB66717C787B300F902F6 /* playButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@2x.png"; sourceTree = "<group>"; };
+		561BB66917C78E6200F902F6 /* scoreBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scoreBackground@2x.png"; sourceTree = "<group>"; };
 		561CD11317C6225E00AF3791 /* AutoSnakeV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnakeV2.h; sourceTree = "<group>"; };
 		561CD11417C6225E00AF3791 /* AutoSnakeV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnakeV2.m; sourceTree = "<group>"; };
 		F404D02117098B2F00C66D5F /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = HelloWordGame/Snake.h; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		F4C98AAF170E98D40060DF89 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				561BB66917C78E6200F902F6 /* scoreBackground@2x.png */,
 				561BB65D17C784D000F902F6 /* coverLabal@2x.png */,
 				561BB66717C787B300F902F6 /* playButton@2x.png */,
 				F4C98AB0170E98D50060DF89 /* food@2x.png */,
@@ -1030,6 +1033,7 @@
 				561BB66517C7857000F902F6 /* Default.png in Resources */,
 				561BB66617C7857000F902F6 /* Default@2x.png in Resources */,
 				561BB66817C787B300F902F6 /* playButton@2x.png in Resources */,
+				561BB66A17C78E6200F902F6 /* scoreBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

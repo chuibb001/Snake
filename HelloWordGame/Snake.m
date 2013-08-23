@@ -11,6 +11,23 @@
 @implementation Snake
 @synthesize snake_sprites=_snake_sprites;
 
+#pragma mark init
+-(void)initScoreSprite
+{
+    winScoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
+    loseScoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
+    
+    CCLabelTTF *winScoreLabel = [CCLabelTTF labelWithString:@"30" fontName:@"Helvetica" fontSize:10.f];
+    winScoreLabel.color=ccc3(25, 25, 25);
+    winScoreLabel.position = ccp(31, 15);
+    [winScoreSprite addChild:winScoreLabel];
+    
+    CCLabelTTF *closeScoreLabel = [CCLabelTTF labelWithString:@"2" fontName:@"Helvetica" fontSize:10.f];
+    closeScoreLabel.color=ccc3(25, 25, 25);
+    closeScoreLabel.position = ccp(31, 15);
+    [loseScoreSprite addChild:closeScoreLabel];
+}
+
 - (id)init
 {
     self = [super init];
@@ -33,10 +50,13 @@
         head.rotation=90;
         _speed = 2.0;
         _cumulation = 0.0f;
+        
+        [self initScoreSprite];
     }
     return self;
 }
 
+#pragma mark private
 -(CCSprite *)SpriteAtIndex:(int)index
 {
     CCSprite *sprite;
@@ -171,5 +191,34 @@
 -(BOOL)isColide:(SPoint)a b:(SPoint)b
 {
     return ((a.x == b.x) && (a.y == b.y));
+}
+
+
+#pragma mark label
+-(void)showWinLabel:(CCLayer *)target
+{
+    CGPoint pos = [[World sharedWorld] PointTranslation:_snake_points[0].x :_snake_points[0].y];
+    winScoreSprite.position = pos;
+    //CCSprite * s = [CCSprite spriteWithFile:@"scoreBackground@2x.png"];
+    //s.position = pos;
+    [target addChild:winScoreSprite];
+}
+-(void)showLoseLabel:(CCLayer *)target
+{
+    CGPoint pos = [[World sharedWorld] PointTranslation:_snake_points[0].x :_snake_points[0].y];
+    //loseScoreSprite.position = pos;
+    [target addChild:loseScoreSprite];
+}
+
+-(void)dealloc
+{
+    [_snake_sprites release];
+    _snake_sprites = nil;
+    [winScoreSprite release];
+    winScoreSprite = nil;
+    [loseScoreSprite release];
+    loseScoreSprite = nil;
+    
+    [super dealloc];
 }
 @end

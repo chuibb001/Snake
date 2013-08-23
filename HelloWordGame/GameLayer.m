@@ -211,7 +211,10 @@
     if(snake.cumulation >=snakeBase)
     {
         if(![snake step:autoSnake])
+        {
+            [snake showLoseLabel:self];
             [self updateSnakeScore:SnakeLosePoint];
+        }
         else
         {
             if([snake canEatFood:[food getFoodPosition]])
@@ -221,6 +224,7 @@
                 [food decreaseFoodCount];
                 snake.numberOfFoodEatten++;
                 //[self setSnakeScore:snake.numberOfFoodEatten];
+                [snake showWinLabel:self];
                 [self updateSnakeScore:SnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])
@@ -236,7 +240,10 @@
     if(autoSnake.cumulation >=autoSnakeBase)
     {
         if(![autoSnake step:[food getFoodPosition] andAnotherSnake:snake])
+        {
+            [autoSnake showLoseLabel:self];
             [self updateSnakeScore:AutoSnakeLosePoint];
+        }
         else
         {
             if([autoSnake canEatFood:[food getFoodPosition]])
@@ -246,6 +253,7 @@
                 [food decreaseFoodCount];
                 autoSnake.numberOfFoodEatten++;
                 //[self setAutoSnakeScore:autoSnake.numberOfFoodEatten];
+                [autoSnake showWinLabel:self];
                 [self updateSnakeScore:AutoSnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])

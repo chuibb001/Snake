@@ -34,6 +34,7 @@ int y_table[4][3] = {1,0,0,-1,0,0,0,1,-1,0,1,-1};
         CCSprite * head= [_snake_sprites objectAtIndex:0];
         head.rotation=270;
         
+        [self initScoreSprite];
     }
     return self;
 }

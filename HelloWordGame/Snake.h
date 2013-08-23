@@ -27,6 +27,9 @@ typedef enum
     int _current_length;
     int max_length;
     Direction current_direction;
+    
+    CCSprite *winScoreSprite;
+    CCSprite *loseScoreSprite;
 }
 
 @property (nonatomic,retain) NSMutableArray *snake_sprites;
@@ -43,4 +46,8 @@ typedef enum
 // c数组getter
 -(SPoint *)getSnakePoints;
 -(Boolean)isClideWithAnotherSnake:(Snake *)anotherSnake;
+// 得分
+-(void)showWinLabel:(CCLayer *)target;
+-(void)showLoseLabel:(CCLayer *)target;
+-(void)initScoreSprite;
 @end

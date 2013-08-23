@@ -36,6 +36,8 @@
         CCSprite * head= [_snake_sprites objectAtIndex:0];
         head.rotation=270;
         
+        [self initScoreSprite];
+        
         // A*
         self.openList = [[[NSMutableArray alloc] init] autorelease];
         self.closeList = [[[NSMutableArray alloc] init] autorelease];
