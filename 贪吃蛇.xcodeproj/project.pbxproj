@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561BB65F17C784D000F902F6 /* coverLabal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB65D17C784D000F902F6 /* coverLabal@2x.png */; };
+		561BB66417C7857000F902F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66117C7857000F902F6 /* Default-568h@2x.png */; };
+		561BB66517C7857000F902F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66217C7857000F902F6 /* Default.png */; };
+		561BB66617C7857000F902F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66317C7857000F902F6 /* Default@2x.png */; };
+		561BB66817C787B300F902F6 /* playButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BB66717C787B300F902F6 /* playButton@2x.png */; };
+		561CD11617C6347100AF3791 /* AutoSnakeV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 561CD11417C6225E00AF3791 /* AutoSnakeV2.m */; };
 		F404D02317098B2F00C66D5F /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02217098B2F00C66D5F /* Snake.m */; };
 		F404D0291709907300C66D5F /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D0281709907200C66D5F /* World.m */; };
 		F404D02C1709929D00C66D5F /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F404D02B1709929C00C66D5F /* GameLayer.m */; };
@@ -36,10 +42,6 @@
 		F4DBA889170805EF00599EA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA888170805EF00599EA8 /* Foundation.framework */; };
 		F4DBA88B170805EF00599EA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA88A170805EF00599EA8 /* CoreGraphics.framework */; };
 		F4DBA88D170805EF00599EA8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DBA88C170805EF00599EA8 /* GameKit.framework */; };
-		F4DBA891170805EF00599EA8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA890170805EF00599EA8 /* Default.png */; };
-		F4DBA893170805EF00599EA8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA892170805EF00599EA8 /* Default@2x.png */; };
-		F4DBA895170805EF00599EA8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA894170805EF00599EA8 /* Default-568h@2x.png */; };
-		F4DBA897170805EF00599EA8 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */; };
 		F4DBA8A6170805EF00599EA8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F4DBA8A5170805EF00599EA8 /* iTunesArtwork */; };
 		F4DBA8AB170805EF00599EA8 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBA8AA170805EF00599EA8 /* CCAction.m */; };
 		F4DBA8AE170805EF00599EA8 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DBA8AD170805EF00599EA8 /* CCActionCamera.m */; };
@@ -156,6 +158,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		561BB65D17C784D000F902F6 /* coverLabal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coverLabal@2x.png"; sourceTree = "<group>"; };
+		561BB66117C7857000F902F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		561BB66217C7857000F902F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		561BB66317C7857000F902F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		561BB66717C787B300F902F6 /* playButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@2x.png"; sourceTree = "<group>"; };
+		561CD11317C6225E00AF3791 /* AutoSnakeV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnakeV2.h; sourceTree = "<group>"; };
+		561CD11417C6225E00AF3791 /* AutoSnakeV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnakeV2.m; sourceTree = "<group>"; };
 		F404D02117098B2F00C66D5F /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = HelloWordGame/Snake.h; sourceTree = "<group>"; };
 		F404D02217098B2F00C66D5F /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Snake.m; path = HelloWordGame/Snake.m; sourceTree = "<group>"; };
 		F404D0271709907200C66D5F /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = HelloWordGame/World.h; sourceTree = "<group>"; };
@@ -193,10 +202,6 @@
 		F4DBA888170805EF00599EA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F4DBA88A170805EF00599EA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F4DBA88C170805EF00599EA8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		F4DBA890170805EF00599EA8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		F4DBA892170805EF00599EA8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
-		F4DBA894170805EF00599EA8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		F4DBA8A4170805EF00599EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		F4DBA8A5170805EF00599EA8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		F4DBA8A9170805EF00599EA8 /* CCAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAction.h; path = libs/cocos2d/CCAction.h; sourceTree = "<group>"; };
@@ -480,6 +485,8 @@
 		F4C98AAF170E98D40060DF89 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				561BB65D17C784D000F902F6 /* coverLabal@2x.png */,
+				561BB66717C787B300F902F6 /* playButton@2x.png */,
 				F4C98AB0170E98D50060DF89 /* food@2x.png */,
 				F4C98AB1170E98D50060DF89 /* ganme_background2@2x.png */,
 				F4C98AB2170E98D50060DF89 /* ganme_background@2x.png */,
@@ -509,6 +516,8 @@
 				F404D02217098B2F00C66D5F /* Snake.m */,
 				F4DE79C2170ACD3500252B5A /* AutoSnake.h */,
 				F4DE79C3170ACD3500252B5A /* AutoSnake.m */,
+				561CD11317C6225E00AF3791 /* AutoSnakeV2.h */,
+				561CD11417C6225E00AF3791 /* AutoSnakeV2.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -580,10 +589,9 @@
 		F4DBA88F170805EF00599EA8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F4DBA890170805EF00599EA8 /* Default.png */,
-				F4DBA892170805EF00599EA8 /* Default@2x.png */,
-				F4DBA894170805EF00599EA8 /* Default-568h@2x.png */,
-				F4DBA896170805EF00599EA8 /* Default-Landscape~ipad.png */,
+				561BB66117C7857000F902F6 /* Default-568h@2x.png */,
+				561BB66217C7857000F902F6 /* Default.png */,
+				561BB66317C7857000F902F6 /* Default@2x.png */,
 				F4DBA8A4170805EF00599EA8 /* Info.plist */,
 				F4DBA8A5170805EF00599EA8 /* iTunesArtwork */,
 			);
@@ -1001,10 +1009,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DBA891170805EF00599EA8 /* Default.png in Resources */,
-				F4DBA893170805EF00599EA8 /* Default@2x.png in Resources */,
-				F4DBA895170805EF00599EA8 /* Default-568h@2x.png in Resources */,
-				F4DBA897170805EF00599EA8 /* Default-Landscape~ipad.png in Resources */,
 				F4DBA8A6170805EF00599EA8 /* iTunesArtwork in Resources */,
 				F4DBA9FC170805F200599EA8 /* ChangeLog in Resources */,
 				F4C98ABE170E98D50060DF89 /* food@2x.png in Resources */,
@@ -1021,6 +1025,11 @@
 				F4C98AC9170E98D50060DF89 /* snake_green_head@2x.png in Resources */,
 				F4C98ACA170E98D50060DF89 /* snake_green_light@2x.png in Resources */,
 				F4C98ACB170E98D50060DF89 /* world@2x.png in Resources */,
+				561BB65F17C784D000F902F6 /* coverLabal@2x.png in Resources */,
+				561BB66417C7857000F902F6 /* Default-568h@2x.png in Resources */,
+				561BB66517C7857000F902F6 /* Default.png in Resources */,
+				561BB66617C7857000F902F6 /* Default@2x.png in Resources */,
+				561BB66817C787B300F902F6 /* playButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +1040,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561CD11617C6347100AF3791 /* AutoSnakeV2.m in Sources */,
 				F4DBA8AB170805EF00599EA8 /* CCAction.m in Sources */,
 				F4DBA8AE170805EF00599EA8 /* CCActionCamera.m in Sources */,
 				F4DBA8B1170805EF00599EA8 /* CCActionCatmullRom.m in Sources */,
@@ -1158,8 +1168,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG XIN NAN";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG XIN NAN";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1171,8 +1181,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "27D4E426-242E-418E-B627-B6558C4A942C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27D4E426-242E-418E-B627-B6558C4A942C";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1182,8 +1192,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHANG XIN NAN";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHANG XIN NAN";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -1193,8 +1203,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "27D4E426-242E-418E-B627-B6558C4A942C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "27D4E426-242E-418E-B627-B6558C4A942C";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

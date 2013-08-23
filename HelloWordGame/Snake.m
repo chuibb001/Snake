@@ -31,7 +31,7 @@
         }
         CCSprite * head= [_snake_sprites objectAtIndex:0];
         head.rotation=90;
-        _speed = 1.0f;
+        _speed = 2.0;
         _cumulation = 0.0f;
     }
     return self;

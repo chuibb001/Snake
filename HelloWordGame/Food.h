@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "Constant.h"
 #import "World.h"
-
+#import "Snake.h"
 @interface Food : NSObject
 {
     SPoint position;
@@ -18,7 +18,7 @@
     int food_count;
 }
 
-- (CCSprite *)setUpFoodSprite;
+- (CCSprite *)setUpFoodSprite:(Snake *)snake autoS:(Snake *)autoSnake;
 - (SPoint)getFoodPosition;
 - (CCSprite *)currentSprite;
 - (void)decreaseFoodCount;

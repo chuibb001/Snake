@@ -37,19 +37,20 @@
 {
 	if( (self=[super init]))
     {
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        
         CCLayerColor *backgroundColor=[CCLayerColor layerWithColor:ccc4(193, 219, 236, 255)];
         [self addChild:backgroundColor z:-1];
         
-        CCSprite *intro=[CCSprite spriteWithFile:@"intro@2x.png"];
-        intro.position=ccp([[CCDirector sharedDirector] winSize].width/2-50, 160);
+        CCSprite *intro=[CCSprite spriteWithFile:@"coverLabal@2x.png"];
+        intro.position=ccp(size.width/2, size.height/2 + 100);
         [self addChild:intro];
-        CCMenuItemImage *playItem=[CCMenuItemImage itemWithNormalImage:@"play@2x.png" selectedImage:@"play@2x.png" target:self selector:@selector(Play)];
         
-        //CCMenuItemFont *play=[CCMenuItemFont itemWithString:@"开始游戏" target:self selector:@selector(Play)];
-        //CCMenuItemFont *about=[CCMenuItemFont itemWithString:@"关于我们" target:self selector:@selector(Play)];
+        CCMenuItemImage *playItem=[CCMenuItemImage itemWithNormalImage:@"playButton@2x.png" selectedImage:@"playButton@2x.png" target:self selector:@selector(Play)];
+        
         
         CCMenu *menu = [CCMenu menuWithItems:playItem,nil];
-        menu.position=ccp([[CCDirector sharedDirector] winSize].width/2+160,50);
+        menu.position=ccp(size.width/2,size.height/2 - 20);
         [self addChild:menu];
     }
 	

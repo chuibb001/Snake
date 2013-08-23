@@ -12,10 +12,19 @@
 #import "Snake.h"
 #import "World.h"
 #import "Food.h"
+#import "AutoSnakeV2.h"
+typedef enum
+{
+    SnakeGetPoint = 0,
+    SnakeLosePoint,
+    AutoSnakeGetPoint,
+    AutoSnakeLosePoint,
+}GameScoreType;
+
 @interface GameLayer : CCLayer
 {
     Snake *snake;
-    AutoSnake *autoSnake;
+    AutoSnakeV2 *autoSnake;
     World *world;
     Food *food;
         
@@ -25,6 +34,9 @@
     
     CCMenuItemFont *snake_score;
     CCMenuItemFont *autosnake_score;
+    
+    int snakeScore;
+    int autoSnakeScore;
 }
 
 +(id)scene;

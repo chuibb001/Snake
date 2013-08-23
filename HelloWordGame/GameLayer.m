@@ -23,7 +23,7 @@
     if(self=[super init])
     {
         snake=[[Snake alloc] init];
-        autoSnake=[[AutoSnake alloc] init];
+        autoSnake=[[AutoSnakeV2 alloc] init];
         world=[World sharedWorld];
         food=[[Food alloc] init];
         
@@ -92,10 +92,16 @@
     [autosnake_score setFontSize:16.0];
     [snake_score setColor:ccc3(25, 25, 25)];
     [autosnake_score setColor:ccc3(25, 25, 25)];
-    CCMenu *menu1=[CCMenu menuWithItems:snake_score,autosnake_score, nil];
-    menu1.position=ccp(100, 15);
+    
+    CCMenu *menu1=[CCMenu menuWithItems:snake_score, nil];
+    menu1.position=ccp(50, 15);
     [menu1 alignItemsHorizontally];
     [self addChild:menu1];
+    
+    CCMenu *menu2=[CCMenu menuWithItems:autosnake_score, nil];
+    menu2.position=ccp(150, 15);
+    [menu2 alignItemsHorizontally];
+    [self addChild:menu2];
     
 }
 -(void)setSnakeScore:(int)score
@@ -131,7 +137,7 @@
 -(void)gameOver
 {
     [self unscheduleAllSelectors];
-    [self showLabel:@"Game Over!"];
+    [self showLabel:@"You Lose!"];
 
 }
 -(void)gameWin
@@ -142,7 +148,7 @@
 }
 -(void)decideWhoWin
 {
-    if(snake.numberOfFoodEatten>autoSnake.numberOfFoodEatten)
+    if(snakeScore>autoSnakeScore)
        [self gameWin];
     else
         [self gameOver];
@@ -169,7 +175,28 @@
     
     [gameOverLabel runAction:sequence];
 }
-
+#pragma mark 得分
+-(void)updateSnakeScore:(GameScoreType)type
+{
+    switch (type) {
+        case SnakeGetPoint:
+            snakeScore += 30;
+            break;
+        case SnakeLosePoint:
+            snakeScore -= 2;
+            break;
+        case AutoSnakeGetPoint:
+            autoSnakeScore += 30;
+            break;
+        case AutoSnakeLosePoint:
+            autoSnakeScore -= 2;
+            break;
+        default:
+            break;
+    }
+    [self setSnakeScore:snakeScore];
+    [self setAutoSnakeScore:autoSnakeScore];
+}
 #pragma mark 刷新
 -(void)update:(ccTime)delta // 每一帧都调用,delta表示上一次调用后过去的时间,现在是1/30
 {   
@@ -184,7 +211,7 @@
     if(snake.cumulation >=snakeBase)
     {
         if(![snake step:autoSnake])
-            [self gameOver];
+            [self updateSnakeScore:SnakeLosePoint];
         else
         {
             if([snake canEatFood:[food getFoodPosition]])
@@ -193,12 +220,13 @@
                 [self drawFood];
                 [food decreaseFoodCount];
                 snake.numberOfFoodEatten++;
-                [self setSnakeScore:snake.numberOfFoodEatten];
+                //[self setSnakeScore:snake.numberOfFoodEatten];
+                [self updateSnakeScore:SnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])
                     [self decideWhoWin];
                 
-                snake.speed += 0.6;
+                snake.speed += 0.2;
             }
         }
         snake.cumulation = 0.0;
@@ -208,7 +236,7 @@
     if(autoSnake.cumulation >=autoSnakeBase)
     {
         if(![autoSnake step:[food getFoodPosition] andAnotherSnake:snake])
-            [self gameOver];
+            [self updateSnakeScore:AutoSnakeLosePoint];
         else
         {
             if([autoSnake canEatFood:[food getFoodPosition]])
@@ -217,12 +245,13 @@
                 [self drawFood];
                 [food decreaseFoodCount];
                 autoSnake.numberOfFoodEatten++;
-                [self setSnakeScore:autoSnake.numberOfFoodEatten];
+                //[self setAutoSnakeScore:autoSnake.numberOfFoodEatten];
+                [self updateSnakeScore:AutoSnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])
                     [self decideWhoWin];
                 
-                autoSnake.speed += 0.6;
+                autoSnake.speed += 0.2;
             }
         }
         autoSnake.cumulation = 0.0;
@@ -268,7 +297,7 @@
 #pragma mark 食物
 -(void)drawFood
 {
-    CCSprite *foodSprite=[food setUpFoodSprite];
+    CCSprite *foodSprite=[food setUpFoodSprite:snake autoS:autoSnake];
     [self addChild:foodSprite];
 }
 -(void)cleanFood
