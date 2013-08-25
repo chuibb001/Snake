@@ -12,22 +12,6 @@
 @synthesize snake_sprites=_snake_sprites;
 
 #pragma mark init
--(void)initScoreSprite
-{
-    winScoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
-    loseScoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
-    
-    CCLabelTTF *winScoreLabel = [CCLabelTTF labelWithString:@"30" fontName:@"Helvetica" fontSize:10.f];
-    winScoreLabel.color=ccc3(25, 25, 25);
-    winScoreLabel.position = ccp(31, 15);
-    [winScoreSprite addChild:winScoreLabel];
-    
-    CCLabelTTF *closeScoreLabel = [CCLabelTTF labelWithString:@"2" fontName:@"Helvetica" fontSize:10.f];
-    closeScoreLabel.color=ccc3(25, 25, 25);
-    closeScoreLabel.position = ccp(31, 15);
-    [loseScoreSprite addChild:closeScoreLabel];
-}
-
 - (id)init
 {
     self = [super init];
@@ -51,7 +35,6 @@
         _speed = 2.0;
         _cumulation = 0.0f;
         
-        [self initScoreSprite];
     }
     return self;
 }
@@ -135,11 +118,15 @@
 {
     if(point.x==_snake_points[0].x &&point.y==_snake_points[0].y)
     {
-        
-        _snake_points[_current_length]=lastPoint;
-        CCSprite *sprite=[self SpriteAtIndex:_current_length];
-        _current_length++;
-        [_snake_sprites addObject:sprite];
+        self.numberOfFoodEatten ++;
+        NSLog(@"%d",self.numberOfFoodEatten);
+        if(self.numberOfFoodEatten % 5 == 0) // 吃5个尾巴才变成
+        {
+            _snake_points[_current_length]=lastPoint;
+            CCSprite *sprite=[self SpriteAtIndex:_current_length];
+            _current_length++;
+            [_snake_sprites addObject:sprite];
+        }
         return YES;
     }
     else
@@ -192,32 +179,16 @@
 {
     return ((a.x == b.x) && (a.y == b.y));
 }
-
-
-#pragma mark label
--(void)showWinLabel:(CCLayer *)target
+-(CGPoint)labelPoint
 {
-    CGPoint pos = [[World sharedWorld] PointTranslation:_snake_points[0].x :_snake_points[0].y];
-    winScoreSprite.position = pos;
-    //CCSprite * s = [CCSprite spriteWithFile:@"scoreBackground@2x.png"];
-    //s.position = pos;
-    [target addChild:winScoreSprite];
+    SPoint s = [self positionOfSnakeAtIndex:0];
+    CGPoint point = [[World sharedWorld] PointTranslation:s.x :s.y+1];
+    return point;
 }
--(void)showLoseLabel:(CCLayer *)target
-{
-    CGPoint pos = [[World sharedWorld] PointTranslation:_snake_points[0].x :_snake_points[0].y];
-    //loseScoreSprite.position = pos;
-    [target addChild:loseScoreSprite];
-}
-
 -(void)dealloc
 {
     [_snake_sprites release];
     _snake_sprites = nil;
-    [winScoreSprite release];
-    winScoreSprite = nil;
-    [loseScoreSprite release];
-    loseScoreSprite = nil;
     
     [super dealloc];
 }

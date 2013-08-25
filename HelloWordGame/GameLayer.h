@@ -34,6 +34,8 @@ typedef enum
     
     CCMenuItemFont *snake_score;
     CCMenuItemFont *autosnake_score;
+    CCSprite *snake_scoreSprite;  // 得分
+    CCSprite *autosnake_scoreSprite;  // 得分
     
     int snakeScore;
     int autoSnakeScore;

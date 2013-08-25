@@ -35,10 +35,16 @@
         
         [self drawFood];
         [self setLabels];
+        [self initScoreSprite];
         [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timePass:) userInfo:nil repeats:YES];
         
     }
     return self;
+}
+-(void)initScoreSprite
+{
+    snake_scoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
+    autosnake_scoreSprite = [[CCSprite alloc] initWithFile:@"scoreBackground@2x.png"];
 }
 
 -(void)timePass:(NSTimer *)timer
@@ -197,6 +203,47 @@
     [self setSnakeScore:snakeScore];
     [self setAutoSnakeScore:autoSnakeScore];
 }
+-(void)showScoreSprite:(GameScoreType)type
+{
+//    int score;
+//    //CCSprite *sprite = [CCSprite spriteWithFile:@"scoreBackground@2x.png"];
+//    switch (type) {
+//        case SnakeGetPoint:
+//            score = 30;
+//            snake_scoreSprite.position = [snake labelPoint];
+//            break;
+//        case SnakeLosePoint:
+//            score = -2;
+//            snake_scoreSprite.position = [snake labelPoint];
+//            break;
+//        case AutoSnakeGetPoint:
+//            score = 30;
+//            snake_scoreSprite.position = [autoSnake labelPoint];
+//            break;
+//        case AutoSnakeLosePoint:
+//            score = -2;
+//            snake_scoreSprite.position = [autoSnake labelPoint];
+//            break;
+//        default:
+//            break;
+//    }
+//    
+//    CCLabelTTF *scoreLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",score] fontName:@"Helvetica" fontSize:10.f];
+//    scoreLabel.color=ccc3(25, 25, 25);
+//    scoreLabel.position = ccp(5, 5);
+//    [snake_scoreSprite addChild:scoreLabel];
+//    [self addChild:snake_scoreSprite];
+//    CCFadeIn *fadeIn = [CCFadeIn actionWithDuration:0.5];
+//    CCFadeOut *fadeOut = [CCFadeOut actionWithDuration:0.5];
+//    id callFun = [CCCallFuncN actionWithTarget:self selector:@selector(removeAnimationSprite:)];
+//    id sequence=[CCSequence actions:fadeIn,fadeOut,callFun, nil];
+//    [snake_scoreSprite runAction:sequence];
+    
+}
+-(void)removeAnimationSprite:(id)sender
+{
+    [snake_scoreSprite removeFromParentAndCleanup:YES];
+}
 #pragma mark 刷新
 -(void)update:(ccTime)delta // 每一帧都调用,delta表示上一次调用后过去的时间,现在是1/30
 {   
@@ -212,7 +259,7 @@
     {
         if(![snake step:autoSnake])
         {
-            [snake showLoseLabel:self];
+            [self showScoreSprite:SnakeLosePoint];
             [self updateSnakeScore:SnakeLosePoint];
         }
         else
@@ -222,15 +269,15 @@
                 [self cleanFood];  // 清除食物并绘制新食物
                 [self drawFood];
                 [food decreaseFoodCount];
-                snake.numberOfFoodEatten++;
+                //snake.numberOfFoodEatten++;
                 //[self setSnakeScore:snake.numberOfFoodEatten];
-                [snake showWinLabel:self];
+                [self showScoreSprite:SnakeGetPoint];
                 [self updateSnakeScore:SnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])
                     [self decideWhoWin];
                 
-                snake.speed += 0.2;
+                snake.speed += 0.1;
             }
         }
         snake.cumulation = 0.0;
@@ -241,7 +288,7 @@
     {
         if(![autoSnake step:[food getFoodPosition] andAnotherSnake:snake])
         {
-            [autoSnake showLoseLabel:self];
+            [self showScoreSprite:AutoSnakeLosePoint];
             [self updateSnakeScore:AutoSnakeLosePoint];
         }
         else
@@ -251,15 +298,15 @@
                 [self cleanFood];  // 清除食物并绘制新食物
                 [self drawFood];
                 [food decreaseFoodCount];
-                autoSnake.numberOfFoodEatten++;
+                //autoSnake.numberOfFoodEatten++;
                 //[self setAutoSnakeScore:autoSnake.numberOfFoodEatten];
-                [autoSnake showWinLabel:self];
+                [self showScoreSprite:AutoSnakeGetPoint];
                 [self updateSnakeScore:AutoSnakeGetPoint];
                 // 食物吃完了，判断谁赢
                 if([food isFoodRemaining])
                     [self decideWhoWin];
                 
-                autoSnake.speed += 0.2;
+                autoSnake.speed += 0.1;
             }
         }
         autoSnake.cumulation = 0.0;

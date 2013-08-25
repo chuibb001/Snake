@@ -36,7 +36,6 @@
         CCSprite * head= [_snake_sprites objectAtIndex:0];
         head.rotation=270;
         
-        [self initScoreSprite];
         
         // A*
         self.openList = [[[NSMutableArray alloc] init] autorelease];
@@ -91,7 +90,7 @@
         return NO;
     else
     {
-        Node *findNode = minNode;
+        Node *findNode = minNode; // 新的头位置
         while (minNode.parent) {
             findNode = minNode;
             minNode = minNode.parent;
@@ -99,6 +98,9 @@
         }
         
         newHeadPos = findNode.position;
+        SPoint oldHeadPos = _snake_points[0];
+        
+        // 身体数据更新
         lastPoint=_snake_points[_current_length-1];
         for (int i = _current_length - 1; i > 0; i--)
         {
@@ -106,6 +108,37 @@
         }
         _snake_points[0]=newHeadPos;
         
+        // 头部方向决定
+        int a = newHeadPos.x - oldHeadPos.x;
+        int b = newHeadPos.y - oldHeadPos.y;
+        switch (current_direction) {
+            case UP:
+                if(a == -1)
+                    current_direction = LEFT;
+                else if(a == 1)
+                    current_direction = RIGHT;
+                break;
+            case DOWN:
+                if(a == -1)
+                    current_direction = LEFT;
+                else if(a == 1)
+                    current_direction = RIGHT;
+                break;
+            case LEFT:
+                if(b == -1)
+                    current_direction = DOWN;
+                else if(b == 1)
+                    current_direction = UP;
+                break;
+            case RIGHT:
+                if(b == -1)
+                    current_direction = DOWN;
+                else if(b == 1)
+                    current_direction = UP;
+                break;
+            default:
+                break;
+        }
         CCSprite *head=[_snake_sprites objectAtIndex:0];
         head.rotation=current_direction*90;
         

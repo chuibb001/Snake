@@ -28,8 +28,6 @@ typedef enum
     int max_length;
     Direction current_direction;
     
-    CCSprite *winScoreSprite;
-    CCSprite *loseScoreSprite;
 }
 
 @property (nonatomic,retain) NSMutableArray *snake_sprites;
@@ -43,11 +41,11 @@ typedef enum
 -(void)changeDirection:(CGPoint)point;
 -(Boolean)canEatFood:(SPoint)point;
 -(SPoint)positionOfSnakeAtIndex:(int)index;
+-(CGPoint)labelPoint;
 // c数组getter
 -(SPoint *)getSnakePoints;
 -(Boolean)isClideWithAnotherSnake:(Snake *)anotherSnake;
 // 得分
 -(void)showWinLabel:(CCLayer *)target;
 -(void)showLoseLabel:(CCLayer *)target;
--(void)initScoreSprite;
 @end

@@ -172,7 +172,7 @@
 		F404D0271709907200C66D5F /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = HelloWordGame/World.h; sourceTree = "<group>"; };
 		F404D0281709907200C66D5F /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = World.m; path = HelloWordGame/World.m; sourceTree = "<group>"; };
 		F404D02A1709929C00C66D5F /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = HelloWordGame/GameLayer.h; sourceTree = "<group>"; };
-		F404D02B1709929C00C66D5F /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = HelloWordGame/GameLayer.m; sourceTree = "<group>"; };
+		F404D02B1709929C00C66D5F /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 3; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = HelloWordGame/GameLayer.m; sourceTree = "<group>"; };
 		F404D02E1709BFF600C66D5F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = HelloWordGame/Food.h; sourceTree = "<group>"; };
 		F404D02F1709BFF600C66D5F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = HelloWordGame/Food.m; sourceTree = "<group>"; };
 		F404D0311709C11000C66D5F /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
